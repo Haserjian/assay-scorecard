@@ -1,0 +1,78 @@
+name: Weekly Scorecard Scan
+
+on:
+  schedule:
+    # Every Sunday at 02:00 UTC
+    - cron: '0 2 * * 0'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Limit to first N repos (for testing)'
+        required: false
+        type: number
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install assay-ai==1.5.3 pyyaml
+          assay version
+
+      - name: Run scorecard scan
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -n "${{ inputs.limit }}" ]; then
+            python scan.py --limit ${{ inputs.limit }}
+          else
+            python scan.py
+          fi
+
+      - name: Build site
+        run: python build_site.py
+
+      - name: Commit results
+        run: |
+          git config user.name "Assay Scorecard Bot"
+          git config user.email "scorecard@assay.ai"
+          git add site/data/results.json
+          git diff --staged --quiet || git commit -m "scorecard: update $(date -u +%Y-%m-%d)"
+          git push
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/
+
+  deploy:
+    needs: scan
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

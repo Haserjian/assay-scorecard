@@ -1,0 +1,16 @@
+# Build artifacts
+site/reports/
+workdir/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

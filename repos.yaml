@@ -1,0 +1,59 @@
+# Evidence Readiness Scorecard - Target Repositories
+# Curated list of high-profile AI/LLM repos for scanning.
+# v1: 20 repos. Scale to 100+ after pipeline validation.
+#
+# Selection criteria:
+#   - High GitHub stars (community adoption)
+#   - Makes direct LLM API calls (OpenAI, Anthropic, Google, LiteLLM)
+#   - Well-known in the AI developer community
+#   - Mix of frameworks, applications, and tools
+
+targets:
+
+  # Agent Frameworks
+  - repo: Significant-Gravitas/AutoGPT
+    category: agent_framework
+  - repo: langchain-ai/langchain
+    category: agent_framework
+  - repo: geekan/MetaGPT
+    category: agent_framework
+  - repo: microsoft/autogen
+    category: agent_framework
+  - repo: gpt-engineer-org/gpt-engineer
+    category: agent_framework
+  - repo: crewAIInc/crewAI
+    category: agent_framework
+  - repo: agno-agi/agno
+    category: agent_framework
+  - repo: openai/openai-agents-python
+    category: agent_framework
+
+  # LLM Wrappers & Tools
+  - repo: BerriAI/litellm
+    category: llm_tool
+  - repo: Pythagora-io/gpt-pilot
+    category: llm_tool
+  - repo: stanfordnlp/dspy
+    category: llm_tool
+  - repo: pydantic/pydantic-ai
+    category: llm_tool
+  - repo: 567-labs/instructor
+    category: llm_tool
+
+  # AI Applications
+  - repo: OpenInterpreter/open-interpreter
+    category: ai_application
+  - repo: mem0ai/mem0
+    category: ai_application
+  - repo: letta-ai/letta
+    category: ai_application
+  - repo: openai/swarm
+    category: ai_application
+
+  # RAG Frameworks
+  - repo: run-llama/llama_index
+    category: rag_framework
+  - repo: deepset-ai/haystack
+    category: rag_framework
+  - repo: ScrapeGraphAI/Scrapegraph-ai
+    category: rag_framework
