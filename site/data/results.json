@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-02-23T23:51:07.534489+00:00",
+  "generated_at": "2026-02-23T23:55:50.884423+00:00",
   "assay_version": "1.6.0",
-  "repo_count": 5,
+  "repo_count": 20,
   "results": [
     {
       "repo": "Significant-Gravitas/AutoGPT",
       "category": "agent_framework",
-      "scanned_at": "2026-02-23T23:50:29.013485+00:00",
-      "stars": 181954,
+      "scanned_at": "2026-02-23T23:52:42.107293+00:00",
+      "stars": 181955,
       "scan": {
         "sites_total": 34,
         "instrumented": 1,
@@ -114,7 +114,7 @@
     {
       "repo": "langchain-ai/langchain",
       "category": "agent_framework",
-      "scanned_at": "2026-02-23T23:50:40.929790+00:00",
+      "scanned_at": "2026-02-23T23:52:54.767365+00:00",
       "stars": 127236,
       "scan": {
         "sites_total": 1701,
@@ -209,7 +209,7 @@
     {
       "repo": "geekan/MetaGPT",
       "category": "agent_framework",
-      "scanned_at": "2026-02-23T23:50:53.287623+00:00",
+      "scanned_at": "2026-02-23T23:53:07.348183+00:00",
       "stars": 64393,
       "scan": {
         "sites_total": 8,
@@ -293,7 +293,7 @@
     {
       "repo": "microsoft/autogen",
       "category": "agent_framework",
-      "scanned_at": "2026-02-23T23:50:58.404225+00:00",
+      "scanned_at": "2026-02-23T23:53:12.636940+00:00",
       "stars": 54739,
       "scan": {
         "sites_total": 24,
@@ -384,7 +384,7 @@
     {
       "repo": "gpt-engineer-org/gpt-engineer",
       "category": "agent_framework",
-      "scanned_at": "2026-02-23T23:51:05.836423+00:00",
+      "scanned_at": "2026-02-23T23:53:20.445908+00:00",
       "stars": 55208,
       "scan": {
         "sites_total": 8,
@@ -462,6 +462,1339 @@
         }
       },
       "report_path": "reports/gpt-engineer-org_gpt-engineer.html",
+      "error": null
+    },
+    {
+      "repo": "crewAIInc/crewAI",
+      "category": "agent_framework",
+      "scanned_at": "2026-02-23T23:53:22.311555+00:00",
+      "stars": 44504,
+      "scan": {
+        "sites_total": 23,
+        "instrumented": 1,
+        "uninstrumented": 22,
+        "scan_status": "fail"
+      },
+      "score": {
+        "score": 1.5,
+        "grade": "F",
+        "breakdown": {
+          "coverage": {
+            "weight": 35,
+            "points": 1.5,
+            "status": "partial",
+            "note": "1/23 instrumented",
+            "evidence": {
+              "sites_total": 23,
+              "instrumented": 1,
+              "uninstrumented": 22
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 11,
+              "files": [
+                ".github/workflows/build-uv-cache.yml",
+                ".github/workflows/codeql.yml",
+                ".github/workflows/docs-broken-links.yml",
+                ".github/workflows/generate-tool-specs.yml",
+                ".github/workflows/linter.yml",
+                ".github/workflows/publish.yml",
+                ".github/workflows/stale.yml",
+                ".github/workflows/tests.yml",
+                ".github/workflows/trigger-deployment-tests.yml",
+                ".github/workflows/type-checker.yml",
+                ".github/workflows/update-test-durations.yml"
+              ],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
+        }
+      },
+      "report_path": "reports/crewAIInc_crewAI.html",
+      "error": null
+    },
+    {
+      "repo": "agno-agi/agno",
+      "category": "agent_framework",
+      "scanned_at": "2026-02-23T23:53:33.323848+00:00",
+      "stars": 38128,
+      "scan": {
+        "sites_total": 42,
+        "instrumented": 9,
+        "uninstrumented": 33,
+        "scan_status": "fail"
+      },
+      "score": {
+        "score": 7.5,
+        "grade": "F",
+        "breakdown": {
+          "coverage": {
+            "weight": 35,
+            "points": 7.5,
+            "status": "partial",
+            "note": "9/42 instrumented",
+            "evidence": {
+              "sites_total": 42,
+              "instrumented": 9,
+              "uninstrumented": 33
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 7,
+              "files": [
+                ".github/workflows/claude.yml",
+                ".github/workflows/performance.yml",
+                ".github/workflows/pr-lint.yml",
+                ".github/workflows/release.yml",
+                ".github/workflows/stale-issues.yml",
+                ".github/workflows/test.yml",
+                ".github/workflows/test_on_release.yml"
+              ],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
+        }
+      },
+      "report_path": "reports/agno-agi_agno.html",
+      "error": null
+    },
+    {
+      "repo": "openai/openai-agents-python",
+      "category": "agent_framework",
+      "scanned_at": "2026-02-23T23:53:53.537530+00:00",
+      "stars": 19087,
+      "scan": {
+        "sites_total": 6,
+        "instrumented": 0,
+        "uninstrumented": 6,
+        "scan_status": "fail"
+      },
+      "score": {
+        "score": 0.0,
+        "grade": "F",
+        "breakdown": {
+          "coverage": {
+            "weight": 35,
+            "points": 0.0,
+            "status": "partial",
+            "note": "0/6 instrumented",
+            "evidence": {
+              "sites_total": 6,
+              "instrumented": 0,
+              "uninstrumented": 6
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 9,
+              "files": [
+                ".github/workflows/docs.yml",
+                ".github/workflows/issues.yml",
+                ".github/workflows/pr-labels.yml",
+                ".github/workflows/publish.yml",
+                ".github/workflows/release-pr-update.yml",
+                ".github/workflows/release-pr.yml",
+                ".github/workflows/release-tag.yml",
+                ".github/workflows/tests.yml",
+                ".github/workflows/update-docs.yml"
+              ],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
+        }
+      },
+      "report_path": "reports/openai_openai-agents-python.html",
+      "error": null
+    },
+    {
+      "repo": "BerriAI/litellm",
+      "category": "llm_tool",
+      "scanned_at": "2026-02-23T23:53:59.074005+00:00",
+      "stars": 36659,
+      "scan": {
+        "sites_total": 967,
+        "instrumented": 400,
+        "uninstrumented": 567,
+        "scan_status": "fail"
+      },
+      "score": {
+        "score": 14.5,
+        "grade": "F",
+        "breakdown": {
+          "coverage": {
+            "weight": 35,
+            "points": 14.5,
+            "status": "partial",
+            "note": "400/967 instrumented",
+            "evidence": {
+              "sites_total": 967,
+              "instrumented": 400,
+              "uninstrumented": 567
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 24,
+              "files": [
+                ".github/workflows/auto_update_price_and_context_window.yml",
+                ".github/workflows/check_duplicate_issues.yml",
+                ".github/workflows/create_daily_staging_branch.yml",
+                ".github/workflows/ghcr_deploy.yml",
+                ".github/workflows/ghcr_helm_deploy.yml",
+                ".github/workflows/helm_unit_test.yml",
+                ".github/workflows/issue-keyword-labeler.yml",
+                ".github/workflows/label-component.yml",
+                ".github/workflows/llm-translation-testing.yml",
+                ".github/workflows/load_test.yml",
+                ".github/workflows/main.yml",
+                ".github/workflows/publish-migrations.yml",
+                ".github/workflows/read_pyproject_version.yml",
+                ".github/workflows/regenerate-poetry-lock.yml",
+                ".github/workflows/reset_stable.yml",
+                ".github/workflows/simple_pypi_publish.yml",
+                ".github/workflows/stale.yml",
+                ".github/workflows/test-linting.yml",
+                ".github/workflows/test-litellm-matrix.yml",
+                ".github/workflows/test-litellm-ui-build.yml",
+                ".github/workflows/test-litellm.yml",
+                ".github/workflows/test-mcp.yml",
+                ".github/workflows/test-model-map.yaml",
+                ".github/workflows/test_server_root_path.yml"
+              ],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
+        }
+      },
+      "report_path": "reports/BerriAI_litellm.html",
+      "error": null
+    },
+    {
+      "repo": "Pythagora-io/gpt-pilot",
+      "category": "llm_tool",
+      "scanned_at": "2026-02-23T23:54:36.003887+00:00",
+      "stars": 33795,
+      "scan": {
+        "sites_total": 2,
+        "instrumented": 0,
+        "uninstrumented": 2,
+        "scan_status": "fail"
+      },
+      "score": {
+        "score": 0.0,
+        "grade": "F",
+        "breakdown": {
+          "coverage": {
+            "weight": 35,
+            "points": 0.0,
+            "status": "partial",
+            "note": "0/2 instrumented",
+            "evidence": {
+              "sites_total": 2,
+              "instrumented": 0,
+              "uninstrumented": 2
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 2,
+              "files": [
+                ".github/workflows/ci.yml",
+                ".github/workflows/cloud-staging-build.yaml"
+              ],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
+        }
+      },
+      "report_path": "reports/Pythagora-io_gpt-pilot.html",
+      "error": null
+    },
+    {
+      "repo": "stanfordnlp/dspy",
+      "category": "llm_tool",
+      "scanned_at": "2026-02-23T23:54:38.080385+00:00",
+      "stars": 32351,
+      "scan": {
+        "sites_total": 7,
+        "instrumented": 0,
+        "uninstrumented": 7,
+        "scan_status": "fail"
+      },
+      "score": {
+        "score": 0.0,
+        "grade": "F",
+        "breakdown": {
+          "coverage": {
+            "weight": 35,
+            "points": 0.0,
+            "status": "partial",
+            "note": "0/7 instrumented",
+            "evidence": {
+              "sites_total": 7,
+              "instrumented": 0,
+              "uninstrumented": 7
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 4,
+              "files": [
+                ".github/workflows/build_and_release.yml",
+                ".github/workflows/docs-push.yml",
+                ".github/workflows/precommits_check.yml",
+                ".github/workflows/run_tests.yml"
+              ],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
+        }
+      },
+      "report_path": "reports/stanfordnlp_dspy.html",
+      "error": null
+    },
+    {
+      "repo": "pydantic/pydantic-ai",
+      "category": "llm_tool",
+      "scanned_at": "2026-02-23T23:54:41.971143+00:00",
+      "stars": 15033,
+      "scan": {
+        "sites_total": 5,
+        "instrumented": 0,
+        "uninstrumented": 5,
+        "scan_status": "fail"
+      },
+      "score": {
+        "score": 0.0,
+        "grade": "F",
+        "breakdown": {
+          "coverage": {
+            "weight": 35,
+            "points": 0.0,
+            "status": "partial",
+            "note": "0/5 instrumented",
+            "evidence": {
+              "sites_total": 5,
+              "instrumented": 0,
+              "uninstrumented": 5
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 6,
+              "files": [
+                ".github/workflows/after-ci.yml",
+                ".github/workflows/at-claude.yml",
+                ".github/workflows/bots.yml",
+                ".github/workflows/ci.yml",
+                ".github/workflows/manually-deploy-docs.yml",
+                ".github/workflows/stale.yml"
+              ],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
+        }
+      },
+      "report_path": "reports/pydantic_pydantic-ai.html",
+      "error": null
+    },
+    {
+      "repo": "567-labs/instructor",
+      "category": "llm_tool",
+      "scanned_at": "2026-02-23T23:54:53.928733+00:00",
+      "stars": 12416,
+      "scan": {
+        "sites_total": 239,
+        "instrumented": 22,
+        "uninstrumented": 217,
+        "scan_status": "fail"
+      },
+      "score": {
+        "score": 3.2,
+        "grade": "F",
+        "breakdown": {
+          "coverage": {
+            "weight": 35,
+            "points": 3.2,
+            "status": "partial",
+            "note": "22/239 instrumented",
+            "evidence": {
+              "sites_total": 239,
+              "instrumented": 22,
+              "uninstrumented": 217
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 8,
+              "files": [
+                ".github/workflows/ai-label.yml",
+                ".github/workflows/evals.yml",
+                ".github/workflows/python-publish.yml",
+                ".github/workflows/ruff.yml",
+                ".github/workflows/scheduled-release.yml",
+                ".github/workflows/test.yml",
+                ".github/workflows/test_docs.yml",
+                ".github/workflows/ty.yml"
+              ],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
+        }
+      },
+      "report_path": "reports/567-labs_instructor.html",
+      "error": null
+    },
+    {
+      "repo": "OpenInterpreter/open-interpreter",
+      "category": "ai_application",
+      "scanned_at": "2026-02-23T23:54:58.215641+00:00",
+      "stars": 62367,
+      "scan": {
+        "sites_total": 4,
+        "instrumented": 0,
+        "uninstrumented": 4,
+        "scan_status": "fail"
+      },
+      "score": {
+        "score": 0.0,
+        "grade": "F",
+        "breakdown": {
+          "coverage": {
+            "weight": 35,
+            "points": 0.0,
+            "status": "partial",
+            "note": "0/4 instrumented",
+            "evidence": {
+              "sites_total": 4,
+              "instrumented": 0,
+              "uninstrumented": 4
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 2,
+              "files": [
+                ".github/workflows/potential-duplicates.yml",
+                ".github/workflows/python-package.yml"
+              ],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
+        }
+      },
+      "report_path": "reports/OpenInterpreter_open-interpreter.html",
+      "error": null
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "category": "ai_application",
+      "scanned_at": "2026-02-23T23:55:00.251233+00:00",
+      "stars": 47867,
+      "scan": {
+        "sites_total": 116,
+        "instrumented": 44,
+        "uninstrumented": 72,
+        "scan_status": "fail"
+      },
+      "score": {
+        "score": 13.3,
+        "grade": "F",
+        "breakdown": {
+          "coverage": {
+            "weight": 35,
+            "points": 13.3,
+            "status": "partial",
+            "note": "44/116 instrumented",
+            "evidence": {
+              "sites_total": 116,
+              "instrumented": 44,
+              "uninstrumented": 72
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 2,
+              "files": [
+                ".github/workflows/cd.yml",
+                ".github/workflows/ci.yml"
+              ],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
+        }
+      },
+      "report_path": "reports/mem0ai_mem0.html",
+      "error": null
+    },
+    {
+      "repo": "letta-ai/letta",
+      "category": "ai_application",
+      "scanned_at": "2026-02-23T23:55:04.676120+00:00",
+      "stars": 21227,
+      "scan": {
+        "sites_total": 258,
+        "instrumented": 38,
+        "uninstrumented": 220,
+        "scan_status": "fail"
+      },
+      "score": {
+        "score": 5.2,
+        "grade": "F",
+        "breakdown": {
+          "coverage": {
+            "weight": 35,
+            "points": 5.2,
+            "status": "partial",
+            "note": "38/258 instrumented",
+            "evidence": {
+              "sites_total": 258,
+              "instrumented": 38,
+              "uninstrumented": 220
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 30,
+              "files": [
+                ".github/workflows/alembic-validation.yml",
+                ".github/workflows/close_stale_issues.yml",
+                ".github/workflows/core-integration-tests.yml",
+                ".github/workflows/core-lint.yml",
+                ".github/workflows/core-unit-sqlite-test.yaml",
+                ".github/workflows/core-unit-test.yml",
+                ".github/workflows/docker-image.yml",
+                ".github/workflows/docker-integration-tests.yaml",
+                ".github/workflows/fern-check.yml",
+                ".github/workflows/fern-docs-preview.yml",
+                ".github/workflows/fern-docs-publish.yml",
+                ".github/workflows/fern-sdk-python-preview.yml",
+                ".github/workflows/fern-sdk-python-publish.yml",
+                ".github/workflows/fern-sdk-typescript-preview.yml",
+                ".github/workflows/fern-sdk-typescript-publish.yml",
+                ".github/workflows/letta-code-sync.yml",
+                ".github/workflows/lint-command.yml",
+                ".github/workflows/manually_clear_old_issues.yml",
+                ".github/workflows/migration-test.yml",
+                ".github/workflows/model-sweep.yaml",
+                ".github/workflows/notify-on-update.yaml",
+                ".github/workflows/poetry-publish-nightly.yml",
+                ".github/workflows/poetry-publish.yml",
+                ".github/workflows/reusable-test-workflow.yml",
+                ".github/workflows/send-message-integration-tests.yml",
+                ".github/workflows/test-lmstudio.yml",
+                ".github/workflows/test-ollama.yml",
+                ".github/workflows/test-pip-install.yml",
+                ".github/workflows/test-vllm.yml",
+                ".github/workflows/warn_poetry_updates.yml"
+              ],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
+        }
+      },
+      "report_path": "reports/letta-ai_letta.html",
+      "error": null
+    },
+    {
+      "repo": "openai/swarm",
+      "category": "ai_application",
+      "scanned_at": "2026-02-23T23:55:14.195831+00:00",
+      "stars": 21000,
+      "scan": {
+        "sites_total": 9,
+        "instrumented": 0,
+        "uninstrumented": 9,
+        "scan_status": "fail"
+      },
+      "score": {
+        "score": 0.0,
+        "grade": "F",
+        "breakdown": {
+          "coverage": {
+            "weight": 35,
+            "points": 0.0,
+            "status": "partial",
+            "note": "0/9 instrumented",
+            "evidence": {
+              "sites_total": 9,
+              "instrumented": 0,
+              "uninstrumented": 9
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 0,
+              "files": [],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
+        }
+      },
+      "report_path": "reports/openai_swarm.html",
+      "error": null
+    },
+    {
+      "repo": "run-llama/llama_index",
+      "category": "rag_framework",
+      "scanned_at": "2026-02-23T23:55:15.628413+00:00",
+      "stars": 47130,
+      "scan": {
+        "sites_total": 200,
+        "instrumented": 25,
+        "uninstrumented": 175,
+        "scan_status": "fail"
+      },
+      "score": {
+        "score": 4.4,
+        "grade": "F",
+        "breakdown": {
+          "coverage": {
+            "weight": 35,
+            "points": 4.4,
+            "status": "partial",
+            "note": "25/200 instrumented",
+            "evidence": {
+              "sites_total": 200,
+              "instrumented": 25,
+              "uninstrumented": 175
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 13,
+              "files": [
+                ".github/workflows/build_package.yml",
+                ".github/workflows/codeql.yml",
+                ".github/workflows/core-typecheck.yml",
+                ".github/workflows/coverage_check.yml",
+                ".github/workflows/deploy-developer-hub.yml",
+                ".github/workflows/issue_classifier.yml",
+                ".github/workflows/lint.yml",
+                ".github/workflows/llama_dev_tests.yml",
+                ".github/workflows/pre_release.yml",
+                ".github/workflows/publish_sub_package.yml",
+                ".github/workflows/release.yml",
+                ".github/workflows/stale_bot.yml",
+                ".github/workflows/unit_test.yml"
+              ],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
+        }
+      },
+      "report_path": "reports/run-llama_llama_index.html",
+      "error": null
+    },
+    {
+      "repo": "deepset-ai/haystack",
+      "category": "rag_framework",
+      "scanned_at": "2026-02-23T23:55:41.772756+00:00",
+      "stars": 24288,
+      "scan": {
+        "sites_total": 5,
+        "instrumented": 0,
+        "uninstrumented": 5,
+        "scan_status": "fail"
+      },
+      "score": {
+        "score": 0.0,
+        "grade": "F",
+        "breakdown": {
+          "coverage": {
+            "weight": 35,
+            "points": 0.0,
+            "status": "partial",
+            "note": "0/5 instrumented",
+            "evidence": {
+              "sites_total": 5,
+              "instrumented": 0,
+              "uninstrumented": 5
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 26,
+              "files": [
+                ".github/workflows/branch_off.yml",
+                ".github/workflows/ci_metrics.yml",
+                ".github/workflows/docker_release.yml",
+                ".github/workflows/docs-website-test-docs-snippets.yml",
+                ".github/workflows/docs-website-vale.yml",
+                ".github/workflows/docs_search_sync.yml",
+                ".github/workflows/docstring_labeler.yml",
+                ".github/workflows/docusaurus_sync.yml",
+                ".github/workflows/e2e.yml",
+                ".github/workflows/github_release.yml",
+                ".github/workflows/labeler.yml",
+                ".github/workflows/license_compliance.yml",
+                ".github/workflows/nightly_testpypi_release.yml",
+                ".github/workflows/project.yml",
+                ".github/workflows/promote_unstable_docs.yml",
+                ".github/workflows/push_release_notes_to_website.yml",
+                ".github/workflows/pypi_release.yml",
+                ".github/workflows/release.yml",
+                ".github/workflows/release_notes.yml",
+                ".github/workflows/release_notes_skipper.yml",
+                ".github/workflows/slow.yml",
+                ".github/workflows/stale.yml",
+                ".github/workflows/tests.yml",
+                ".github/workflows/tests_skipper_trigger.yml",
+                ".github/workflows/tests_skipper_workflow.yml",
+                ".github/workflows/workflows_linting.yml"
+              ],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
+        }
+      },
+      "report_path": "reports/deepset-ai_haystack.html",
+      "error": null
+    },
+    {
+      "repo": "ScrapeGraphAI/Scrapegraph-ai",
+      "category": "rag_framework",
+      "scanned_at": "2026-02-23T23:55:48.706752+00:00",
+      "stars": 22756,
+      "scan": {
+        "sites_total": 42,
+        "instrumented": 0,
+        "uninstrumented": 42,
+        "scan_status": "warn"
+      },
+      "score": {
+        "score": 0.0,
+        "grade": "F",
+        "breakdown": {
+          "coverage": {
+            "weight": 35,
+            "points": 0.0,
+            "status": "partial",
+            "note": "0/42 instrumented",
+            "evidence": {
+              "sites_total": 42,
+              "instrumented": 0,
+              "uninstrumented": 42
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 5,
+              "files": [
+                ".github/workflows/code-quality.yml",
+                ".github/workflows/codeql.yml",
+                ".github/workflows/dependency-review.yml",
+                ".github/workflows/release.yml",
+                ".github/workflows/test-suite.yml"
+              ],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
+        }
+      },
+      "report_path": "reports/ScrapeGraphAI_Scrapegraph-ai.html",
       "error": null
     }
   ]
