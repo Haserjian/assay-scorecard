@@ -89,9 +89,42 @@ def run_assay_score(repo_dir: Path) -> dict | None:
         )
         if result.stdout.strip():
             return json.loads(result.stdout)
+        else:
+            print(f"  SCORE: no stdout (rc={result.returncode})", file=sys.stderr)
+            if result.stderr.strip():
+                print(f"  SCORE stderr: {result.stderr.strip()[:200]}", file=sys.stderr)
     except (subprocess.TimeoutExpired, json.JSONDecodeError, FileNotFoundError) as e:
         print(f"  SCORE FAILED: {e}", file=sys.stderr)
     return None
+
+
+def compute_score_from_scan(scan_data: dict) -> dict:
+    """Fallback score computation when `assay score` is unavailable."""
+    sites = scan_data.get("sites_total", 0)
+    instrumented = scan_data.get("instrumented", 0)
+
+    if sites == 0:
+        coverage_pts = 0.0
+    else:
+        coverage_pts = (instrumented / sites) * 35
+
+    score = round(coverage_pts, 1)
+    if score >= 90:
+        grade = "A"
+    elif score >= 80:
+        grade = "B"
+    elif score >= 70:
+        grade = "C"
+    elif score >= 60:
+        grade = "D"
+    else:
+        grade = "F"
+
+    return {
+        "score": score,
+        "grade": grade,
+        "breakdown": {"coverage_only": True, "note": "assay score unavailable, coverage-only fallback"},
+    }
 
 
 def run_assay_report(repo_dir: Path, output_path: Path) -> bool:
@@ -177,6 +210,9 @@ def scan_repo(target: dict) -> dict:
             "grade": score_result.get("grade", "F"),
             "breakdown": score_result.get("breakdown", {}),
         }
+    elif entry["scan"]:
+        # Fallback: compute score from scan data when assay score is unavailable
+        entry["score"] = compute_score_from_scan(entry["scan"])
 
     # HTML report
     report_name = repo.replace("/", "_") + ".html"
