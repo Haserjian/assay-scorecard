@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-02-23T23:42:02.918440+00:00",
+  "generated_at": "2026-02-23T23:48:37.985752+00:00",
   "assay_version": "1.5.3",
   "repo_count": 5,
   "results": [
     {
       "repo": "Significant-Gravitas/AutoGPT",
       "category": "agent_framework",
-      "scanned_at": "2026-02-23T23:41:26.504728+00:00",
+      "scanned_at": "2026-02-23T23:48:04.720798+00:00",
       "stars": 181954,
       "scan": {
         "sites_total": 33,
@@ -14,29 +14,43 @@
         "uninstrumented": 32,
         "scan_status": "fail"
       },
-      "score": null,
+      "score": {
+        "score": 1.1,
+        "grade": "F",
+        "breakdown": {
+          "coverage_only": true,
+          "note": "assay score unavailable, coverage-only fallback"
+        }
+      },
       "report_path": "reports/Significant-Gravitas_AutoGPT.html",
       "error": null
     },
     {
       "repo": "langchain-ai/langchain",
       "category": "agent_framework",
-      "scanned_at": "2026-02-23T23:41:36.903125+00:00",
-      "stars": 127235,
+      "scanned_at": "2026-02-23T23:48:14.944442+00:00",
+      "stars": 127236,
       "scan": {
         "sites_total": 1697,
         "instrumented": 182,
         "uninstrumented": 1515,
         "scan_status": "fail"
       },
-      "score": null,
+      "score": {
+        "score": 3.8,
+        "grade": "F",
+        "breakdown": {
+          "coverage_only": true,
+          "note": "assay score unavailable, coverage-only fallback"
+        }
+      },
       "report_path": "reports/langchain-ai_langchain.html",
       "error": null
     },
     {
       "repo": "geekan/MetaGPT",
       "category": "agent_framework",
-      "scanned_at": "2026-02-23T23:41:47.306555+00:00",
+      "scanned_at": "2026-02-23T23:48:24.890780+00:00",
       "stars": 64393,
       "scan": {
         "sites_total": 8,
@@ -44,14 +58,21 @@
         "uninstrumented": 8,
         "scan_status": "fail"
       },
-      "score": null,
+      "score": {
+        "score": 0.0,
+        "grade": "F",
+        "breakdown": {
+          "coverage_only": true,
+          "note": "assay score unavailable, coverage-only fallback"
+        }
+      },
       "report_path": "reports/geekan_MetaGPT.html",
       "error": null
     },
     {
       "repo": "microsoft/autogen",
       "category": "agent_framework",
-      "scanned_at": "2026-02-23T23:41:52.520309+00:00",
+      "scanned_at": "2026-02-23T23:48:29.341155+00:00",
       "stars": 54739,
       "scan": {
         "sites_total": 22,
@@ -59,14 +80,21 @@
         "uninstrumented": 22,
         "scan_status": "fail"
       },
-      "score": null,
+      "score": {
+        "score": 0.0,
+        "grade": "F",
+        "breakdown": {
+          "coverage_only": true,
+          "note": "assay score unavailable, coverage-only fallback"
+        }
+      },
       "report_path": "reports/microsoft_autogen.html",
       "error": null
     },
     {
       "repo": "gpt-engineer-org/gpt-engineer",
       "category": "agent_framework",
-      "scanned_at": "2026-02-23T23:42:00.154636+00:00",
+      "scanned_at": "2026-02-23T23:48:36.132930+00:00",
       "stars": 55208,
       "scan": {
         "sites_total": 8,
@@ -74,7 +102,14 @@
         "uninstrumented": 8,
         "scan_status": "fail"
       },
-      "score": null,
+      "score": {
+        "score": 0.0,
+        "grade": "F",
+        "breakdown": {
+          "coverage_only": true,
+          "note": "assay score unavailable, coverage-only fallback"
+        }
+      },
       "report_path": "reports/gpt-engineer-org_gpt-engineer.html",
       "error": null
     }
