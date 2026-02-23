@@ -1,25 +1,111 @@
 {
-  "generated_at": "2026-02-23T23:48:37.985752+00:00",
-  "assay_version": "1.5.3",
+  "generated_at": "2026-02-23T23:51:07.534489+00:00",
+  "assay_version": "1.6.0",
   "repo_count": 5,
   "results": [
     {
       "repo": "Significant-Gravitas/AutoGPT",
       "category": "agent_framework",
-      "scanned_at": "2026-02-23T23:48:04.720798+00:00",
+      "scanned_at": "2026-02-23T23:50:29.013485+00:00",
       "stars": 181954,
       "scan": {
-        "sites_total": 33,
+        "sites_total": 34,
         "instrumented": 1,
-        "uninstrumented": 32,
+        "uninstrumented": 33,
         "scan_status": "fail"
       },
       "score": {
-        "score": 1.1,
+        "score": 1.0,
         "grade": "F",
         "breakdown": {
-          "coverage_only": true,
-          "note": "assay score unavailable, coverage-only fallback"
+          "coverage": {
+            "weight": 35,
+            "points": 1.0,
+            "status": "partial",
+            "note": "1/34 instrumented",
+            "evidence": {
+              "sites_total": 34,
+              "instrumented": 1,
+              "uninstrumented": 33
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 29,
+              "files": [
+                ".github/workflows/classic-autogpt-ci.yml",
+                ".github/workflows/classic-autogpt-docker-cache-clean.yml",
+                ".github/workflows/classic-autogpt-docker-ci.yml",
+                ".github/workflows/classic-autogpt-docker-release.yml",
+                ".github/workflows/classic-autogpts-ci.yml",
+                ".github/workflows/classic-benchmark-ci.yml",
+                ".github/workflows/classic-benchmark_publish_package.yml",
+                ".github/workflows/classic-forge-ci.yml",
+                ".github/workflows/classic-frontend-ci.yml",
+                ".github/workflows/classic-python-checks.yml",
+                ".github/workflows/claude-ci-failure-auto-fix.yml",
+                ".github/workflows/claude-dependabot.yml",
+                ".github/workflows/claude.yml",
+                ".github/workflows/codeql.yml",
+                ".github/workflows/copilot-setup-steps.yml",
+                ".github/workflows/docs-block-sync.yml",
+                ".github/workflows/docs-claude-review.yml",
+                ".github/workflows/docs-enhance.yml",
+                ".github/workflows/platform-autogpt-deploy-dev.yaml",
+                ".github/workflows/platform-autogpt-deploy-prod.yml",
+                ".github/workflows/platform-backend-ci.yml",
+                ".github/workflows/platform-dev-deploy-event-dispatcher.yml",
+                ".github/workflows/platform-frontend-ci.yml",
+                ".github/workflows/platform-fullstack-ci.yml",
+                ".github/workflows/repo-close-stale-issues.yml",
+                ".github/workflows/repo-pr-enforce-base-branch.yml",
+                ".github/workflows/repo-pr-label.yml",
+                ".github/workflows/repo-stats.yml",
+                ".github/workflows/repo-workflow-checker.yml"
+              ],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
         }
       },
       "report_path": "reports/Significant-Gravitas_AutoGPT.html",
@@ -28,20 +114,93 @@
     {
       "repo": "langchain-ai/langchain",
       "category": "agent_framework",
-      "scanned_at": "2026-02-23T23:48:14.944442+00:00",
+      "scanned_at": "2026-02-23T23:50:40.929790+00:00",
       "stars": 127236,
       "scan": {
-        "sites_total": 1697,
+        "sites_total": 1701,
         "instrumented": 182,
-        "uninstrumented": 1515,
+        "uninstrumented": 1519,
         "scan_status": "fail"
       },
       "score": {
-        "score": 3.8,
+        "score": 3.7,
         "grade": "F",
         "breakdown": {
-          "coverage_only": true,
-          "note": "assay score unavailable, coverage-only fallback"
+          "coverage": {
+            "weight": 35,
+            "points": 3.7,
+            "status": "partial",
+            "note": "182/1701 instrumented",
+            "evidence": {
+              "sites_total": 1701,
+              "instrumented": 182,
+              "uninstrumented": 1519
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 16,
+              "files": [
+                ".github/workflows/_compile_integration_test.yml",
+                ".github/workflows/_lint.yml",
+                ".github/workflows/_release.yml",
+                ".github/workflows/_test.yml",
+                ".github/workflows/_test_pydantic.yml",
+                ".github/workflows/auto-label-by-package.yml",
+                ".github/workflows/check_agents_sync.yml",
+                ".github/workflows/check_core_versions.yml",
+                ".github/workflows/check_diffs.yml",
+                ".github/workflows/integration_tests.yml",
+                ".github/workflows/pr_labeler_file.yml",
+                ".github/workflows/pr_labeler_title.yml",
+                ".github/workflows/pr_lint.yml",
+                ".github/workflows/refresh_model_profiles.yml",
+                ".github/workflows/tag-external-contributions.yml",
+                ".github/workflows/v03_api_doc_build.yml"
+              ],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
         }
       },
       "report_path": "reports/langchain-ai_langchain.html",
@@ -50,7 +209,7 @@
     {
       "repo": "geekan/MetaGPT",
       "category": "agent_framework",
-      "scanned_at": "2026-02-23T23:48:24.890780+00:00",
+      "scanned_at": "2026-02-23T23:50:53.287623+00:00",
       "stars": 64393,
       "scan": {
         "sites_total": 8,
@@ -62,8 +221,70 @@
         "score": 0.0,
         "grade": "F",
         "breakdown": {
-          "coverage_only": true,
-          "note": "assay score unavailable, coverage-only fallback"
+          "coverage": {
+            "weight": 35,
+            "points": 0.0,
+            "status": "partial",
+            "note": "0/8 instrumented",
+            "evidence": {
+              "sites_total": 8,
+              "instrumented": 0,
+              "uninstrumented": 8
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 5,
+              "files": [
+                ".github/workflows/build-package.yaml",
+                ".github/workflows/fulltest.yaml",
+                ".github/workflows/pre-commit.yaml",
+                ".github/workflows/stale.yaml",
+                ".github/workflows/unittest.yaml"
+              ],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
         }
       },
       "report_path": "reports/geekan_MetaGPT.html",
@@ -72,20 +293,89 @@
     {
       "repo": "microsoft/autogen",
       "category": "agent_framework",
-      "scanned_at": "2026-02-23T23:48:29.341155+00:00",
+      "scanned_at": "2026-02-23T23:50:58.404225+00:00",
       "stars": 54739,
       "scan": {
-        "sites_total": 22,
+        "sites_total": 24,
         "instrumented": 0,
-        "uninstrumented": 22,
+        "uninstrumented": 24,
         "scan_status": "fail"
       },
       "score": {
         "score": 0.0,
         "grade": "F",
         "breakdown": {
-          "coverage_only": true,
-          "note": "assay score unavailable, coverage-only fallback"
+          "coverage": {
+            "weight": 35,
+            "points": 0.0,
+            "status": "partial",
+            "note": "0/24 instrumented",
+            "evidence": {
+              "sites_total": 24,
+              "instrumented": 0,
+              "uninstrumented": 24
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 12,
+              "files": [
+                ".github/workflows/checks.yml",
+                ".github/workflows/codeql.yml",
+                ".github/workflows/docs.yml",
+                ".github/workflows/dotnet-build.yml",
+                ".github/workflows/dotnet-release.yml",
+                ".github/workflows/integration.yml",
+                ".github/workflows/issue-user-responded.yml",
+                ".github/workflows/lfs-check.yml",
+                ".github/workflows/pytest-mem0.yml",
+                ".github/workflows/pytest-redis-memory.yml",
+                ".github/workflows/python-package-0.2.yml",
+                ".github/workflows/single-python-package.yml"
+              ],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
         }
       },
       "report_path": "reports/microsoft_autogen.html",
@@ -94,7 +384,7 @@
     {
       "repo": "gpt-engineer-org/gpt-engineer",
       "category": "agent_framework",
-      "scanned_at": "2026-02-23T23:48:36.132930+00:00",
+      "scanned_at": "2026-02-23T23:51:05.836423+00:00",
       "stars": 55208,
       "scan": {
         "sites_total": 8,
@@ -106,8 +396,69 @@
         "score": 0.0,
         "grade": "F",
         "breakdown": {
-          "coverage_only": true,
-          "note": "assay score unavailable, coverage-only fallback"
+          "coverage": {
+            "weight": 35,
+            "points": 0.0,
+            "status": "partial",
+            "note": "0/8 instrumented",
+            "evidence": {
+              "sites_total": 8,
+              "instrumented": 0,
+              "uninstrumented": 8
+            }
+          },
+          "lockfile": {
+            "weight": 15,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No lockfile.",
+            "evidence": {
+              "present": false,
+              "valid": false,
+              "stale": false,
+              "issues": []
+            }
+          },
+          "ci_gate": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No evidence CI gate detected.",
+            "evidence": {
+              "workflow_count": 4,
+              "files": [
+                ".github/workflows/automation.yml",
+                ".github/workflows/ci.yaml",
+                ".github/workflows/pre-commit.yaml",
+                ".github/workflows/release.yaml"
+              ],
+              "has_assay_ref": false,
+              "has_run": false,
+              "has_verify": false,
+              "has_lock": false
+            }
+          },
+          "receipts": {
+            "weight": 20,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No repository-local receipts found.",
+            "evidence": {
+              "proof_pack_receipt_files": 0,
+              "mcp_session_files": 0,
+              "repo_receipt_files": 0
+            }
+          },
+          "key_setup": {
+            "weight": 10,
+            "points": 0.0,
+            "status": "fail",
+            "note": "No signing key configured.",
+            "evidence": {
+              "has_signer": false,
+              "signer_count": 0
+            }
+          }
         }
       },
       "report_path": "reports/gpt-engineer-org_gpt-engineer.html",
