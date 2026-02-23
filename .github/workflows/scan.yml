@@ -34,7 +34,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install assay-ai==1.5.3 pyyaml
+          pip install assay-ai==1.6.0 pyyaml
           assay version
 
       - name: Run scorecard scan

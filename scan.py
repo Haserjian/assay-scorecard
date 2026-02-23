@@ -27,7 +27,7 @@ from pathlib import Path
 import yaml
 
 
-ASSAY_VERSION = "1.5.3"  # pinned — bump deliberately, not silently
+ASSAY_VERSION = "1.6.0"  # pinned — bump deliberately, not silently
 RESULTS_DIR = Path("site/data")
 REPORTS_DIR = Path("site/reports")
 WORKDIR = Path("workdir")

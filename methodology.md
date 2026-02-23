@@ -2,7 +2,7 @@
 
 > **Beta.** This scorecard is an early, automated signal — not a final verdict.
 > Scores reflect static analysis of public default branches using
-> [Assay](https://pypi.org/project/assay-ai/) v1.5.3. Known limitations are
+> [Assay](https://pypi.org/project/assay-ai/) v1.6.0. Known limitations are
 > listed below. If a result looks wrong, [open an issue](https://github.com/Haserjian/assay-scorecard/issues)
 > and we will investigate within 48 hours or remove the entry on request.
 
