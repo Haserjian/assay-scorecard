@@ -1,0 +1,84 @@
+name: PR Score Comment
+
+on:
+  workflow_run:
+    workflows: ["PR Score Delta"]
+    types: [completed]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  comment:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Download delta artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: pr-score-delta
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Validate artifact
+        id: validate
+        run: |
+          # Size guard: reject artifacts > 100KB
+          SIZE=$(stat -c%s delta.json 2>/dev/null || stat -f%z delta.json)
+          if [ "$SIZE" -gt 102400 ]; then
+            echo "Artifact too large ($SIZE bytes), skipping comment"
+            echo "skip=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          # Validate JSON structure
+          python3 -c "
+          import json, sys
+          try:
+              d = json.load(open('delta.json'))
+              assert 'delta' in d
+              print('valid=true')
+          except Exception as e:
+              print(f'Validation failed: {e}', file=sys.stderr)
+              sys.exit(1)
+          "
+          echo "skip=false" >> $GITHUB_OUTPUT
+
+      - name: Find PR number
+        if: steps.validate.outputs.skip != 'true'
+        id: pr
+        run: |
+          PR_NUMBER=$(echo '${{ toJSON(github.event.workflow_run.pull_requests) }}' | python3 -c "
+          import json, sys
+          prs = json.load(sys.stdin)
+          if prs:
+              print(prs[0]['number'])
+          else:
+              print('')
+          ")
+          echo "number=$PR_NUMBER" >> $GITHUB_OUTPUT
+
+      - name: Post or update comment
+        if: steps.validate.outputs.skip != 'true' && steps.pr.outputs.number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR_NUMBER=${{ steps.pr.outputs.number }}
+          COMMENT_BODY=$(cat comment.md)
+          MARKER="<!-- assay-scorecard-delta -->"
+          FULL_BODY="${MARKER}
+          ${COMMENT_BODY}"
+
+          # Check for existing comment
+          EXISTING=$(gh api repos/${{ github.repository }}/issues/${PR_NUMBER}/comments \
+            --jq ".[] | select(.body | startswith(\"${MARKER}\")) | .id" \
+            2>/dev/null | head -1)
+
+          if [ -n "$EXISTING" ]; then
+            gh api repos/${{ github.repository }}/issues/comments/${EXISTING} \
+              -X PATCH -f body="$FULL_BODY"
+          else
+            gh api repos/${{ github.repository }}/issues/${PR_NUMBER}/comments \
+              -f body="$FULL_BODY"
+          fi

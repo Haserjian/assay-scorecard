@@ -1,0 +1,77 @@
+name: PR Score Delta
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install assay-ai==1.6.0
+          assay version
+
+      - name: Scan base revision
+        run: |
+          git checkout ${{ github.event.pull_request.base.sha }}
+          mkdir -p /tmp/delta
+          # Scan the scorecard repo itself as a demo target
+          assay scan . --json > /tmp/delta/base_scan.json 2>/dev/null || echo '{"summary":{"sites_total":0,"instrumented":0,"uninstrumented":0}}' > /tmp/delta/base_scan.json
+          assay score . --json > /tmp/delta/base_score.json 2>/dev/null || echo '{"score":0,"grade":"?"}' > /tmp/delta/base_score.json
+          # Merge scan + score
+          python3 -c "
+          import json
+          scan = json.load(open('/tmp/delta/base_scan.json'))
+          score = json.load(open('/tmp/delta/base_score.json'))
+          json.dump({'scan': scan, 'score': score}, open('/tmp/delta/base.json', 'w'), indent=2)
+          "
+
+      - name: Scan head revision
+        run: |
+          git checkout ${{ github.event.pull_request.head.sha }}
+          assay scan . --json > /tmp/delta/head_scan.json 2>/dev/null || echo '{"summary":{"sites_total":0,"instrumented":0,"uninstrumented":0}}' > /tmp/delta/head_scan.json
+          assay score . --json > /tmp/delta/head_score.json 2>/dev/null || echo '{"score":0,"grade":"?"}' > /tmp/delta/head_score.json
+          python3 -c "
+          import json
+          scan = json.load(open('/tmp/delta/head_scan.json'))
+          score = json.load(open('/tmp/delta/head_score.json'))
+          json.dump({'scan': scan, 'score': score}, open('/tmp/delta/head.json', 'w'), indent=2)
+          "
+
+      - name: Compute delta
+        run: |
+          git checkout ${{ github.event.pull_request.head.sha }}
+          python scripts/pr_score_delta.py \
+            --base-json /tmp/delta/base.json \
+            --head-json /tmp/delta/head.json \
+            --output /tmp/delta/comment.md \
+            --json > /tmp/delta/delta.json
+
+      - name: Upload delta artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-score-delta
+          path: |
+            /tmp/delta/delta.json
+            /tmp/delta/comment.md
+          retention-days: 7
+
+      - name: Write job summary
+        run: |
+          echo "## PR Score Delta" >> $GITHUB_STEP_SUMMARY
+          cat /tmp/delta/comment.md >> $GITHUB_STEP_SUMMARY
