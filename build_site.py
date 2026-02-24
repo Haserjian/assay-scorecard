@@ -95,6 +95,11 @@ def build_html(data: dict) -> str:
   <meta property="og:type" content="website">
   <meta property="og:url" content="{SITE_URL}">
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AI Evidence Readiness Scorecard">
+  <meta name="twitter:description" content="We scanned {count} top AI repos for tamper-evident audit trails. Evidence readiness scores for LangChain, crewAI, AutoGPT, and more.">
+
   <style>
     * {{ margin: 0; padding: 0; box-sizing: border-box; }}
 
@@ -208,6 +213,12 @@ def build_html(data: dict) -> str:
   <div class="container">
     <h1>AI Evidence Readiness Scorecard</h1>
     <p class="subtitle">How much of your AI system's behavior is independently verifiable?</p>
+
+    <p style="color:#d29922; font-size:0.85rem; background:#2e2505; border:1px solid #d29922; border-radius:6px; padding:0.6rem 1rem; margin-bottom:1.25rem;">
+      <strong>Beta.</strong> This scorecard measures evidence readiness (instrumentation coverage), not project quality.
+      Most AI projects score low because tamper-evident audit trails are new.
+      <a href="methodology.html" style="color:#d29922;">Methodology</a>
+    </p>
 
     <p class="meta">
       {count} repos scanned with <a href="https://pypi.org/project/assay-ai/">assay-ai</a> v{assay_ver}

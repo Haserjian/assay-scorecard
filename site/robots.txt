@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://haserjian.github.io/assay-scorecard/sitemap.xml

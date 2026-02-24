@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Evidence Readiness Scorecard</title>
+  <meta name="description" content="How much of your AI system's behavior is independently verifiable? Evidence readiness scores for top AI repositories.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Evidence Readiness Scorecard">
+  <meta property="og:description" content="Evidence readiness scores for 20 top AI repositories. How much is verifiable?">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://haserjian.github.io/assay-scorecard">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AI Evidence Readiness Scorecard">
+  <meta name="twitter:description" content="We scanned 20 top AI repos for tamper-evident audit trails. Evidence readiness scores for LangChain, crewAI, AutoGPT, and more.">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      color: #f0f6fc;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: #8b949e;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+
+    .meta {
+      color: #6e7681;
+      font-size: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    th {
+      text-align: left;
+      padding: 0.75rem 0.5rem;
+      border-bottom: 2px solid #30363d;
+      color: #8b949e;
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    th:hover { color: #f0f6fc; }
+
+    td {
+      padding: 0.6rem 0.5rem;
+      border-bottom: 1px solid #21262d;
+    }
+
+    tr:hover { background: #161b22; }
+
+    .num { text-align: right; font-variant-numeric: tabular-nums; }
+
+    .grade {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      min-width: 1.5rem;
+      text-align: center;
+    }
+
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .report-link {
+      font-size: 0.8rem;
+      color: #8b949e;
+    }
+    .report-link:hover { color: #58a6ff; }
+
+    .cta {
+      margin-top: 2rem;
+      padding: 1.25rem;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+    }
+
+    .cta code {
+      background: #0d1117;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #21262d;
+      color: #6e7681;
+      font-size: 0.8rem;
+    }
+
+    .footer a { color: #6e7681; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>AI Evidence Readiness Scorecard</h1>
+    <p class="subtitle">How much of your AI system's behavior is independently verifiable?</p>
+
+    <p style="color:#d29922; font-size:0.85rem; background:#2e2505; border:1px solid #d29922; border-radius:6px; padding:0.6rem 1rem; margin-bottom:1.25rem;">
+      <strong>Beta.</strong> This scorecard measures evidence readiness (instrumentation coverage), not project quality.
+      Most AI projects score low because tamper-evident audit trails are new.
+      <a href="methodology.html" style="color:#d29922;">Methodology</a>
+    </p>
+
+    <p class="meta">
+      20 repos scanned with <a href="https://pypi.org/project/assay-ai/">assay-ai</a> v1.6.0
+      &middot; Last updated: 2026-02-23
+      &middot; <a href="methodology.html">How we score</a>
+    </p>
+
+    <table id="scorecard">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Repository</th>
+          <th onclick="sortTable(1)">Stars</th>
+          <th onclick="sortTable(2)">Call Sites</th>
+          <th onclick="sortTable(3)">Instrumented</th>
+          <th onclick="sortTable(4)">Score</th>
+          <th>Report</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+      <td><a href="https://github.com/567-labs/instructor" target="_blank" rel="noopener">567-labs/instructor</a></td>
+      <td class="num">12,416</td>
+      <td class="num">239</td>
+      <td class="num">22/239</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 3</td>
+      <td><a href="reports/567-labs_instructor.html" class="report-link">View Report</a></td>
+    </tr>
+<tr>
+      <td><a href="https://github.com/agno-agi/agno" target="_blank" rel="noopener">agno-agi/agno</a></td>
+      <td class="num">38,128</td>
+      <td class="num">42</td>
+      <td class="num">9/42</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 8</td>
+      <td><a href="reports/agno-agi_agno.html" class="report-link">View Report</a></td>
+    </tr>
+<tr>
+      <td><a href="https://github.com/BerriAI/litellm" target="_blank" rel="noopener">BerriAI/litellm</a></td>
+      <td class="num">36,659</td>
+      <td class="num">967</td>
+      <td class="num">400/967</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 14</td>
+      <td><a href="reports/BerriAI_litellm.html" class="report-link">View Report</a></td>
+    </tr>
+<tr>
+      <td><a href="https://github.com/crewAIInc/crewAI" target="_blank" rel="noopener">crewAIInc/crewAI</a></td>
+      <td class="num">44,504</td>
+      <td class="num">23</td>
+      <td class="num">1/23</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 2</td>
+      <td><a href="reports/crewAIInc_crewAI.html" class="report-link">View Report</a></td>
+    </tr>
+<tr>
+      <td><a href="https://github.com/deepset-ai/haystack" target="_blank" rel="noopener">deepset-ai/haystack</a></td>
+      <td class="num">24,288</td>
+      <td class="num">5</td>
+      <td class="num">0/5</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 0</td>
+      <td><a href="reports/deepset-ai_haystack.html" class="report-link">View Report</a></td>
+    </tr>
+<tr>
+      <td><a href="https://github.com/geekan/MetaGPT" target="_blank" rel="noopener">geekan/MetaGPT</a></td>
+      <td class="num">64,393</td>
+      <td class="num">8</td>
+      <td class="num">0/8</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 0</td>
+      <td><a href="reports/geekan_MetaGPT.html" class="report-link">View Report</a></td>
+    </tr>
+<tr>
+      <td><a href="https://github.com/gpt-engineer-org/gpt-engineer" target="_blank" rel="noopener">gpt-engineer-org/gpt-engineer</a></td>
+      <td class="num">55,208</td>
+      <td class="num">8</td>
+      <td class="num">0/8</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 0</td>
+      <td><a href="reports/gpt-engineer-org_gpt-engineer.html" class="report-link">View Report</a></td>
+    </tr>
+<tr>
+      <td><a href="https://github.com/langchain-ai/langchain" target="_blank" rel="noopener">langchain-ai/langchain</a></td>
+      <td class="num">127,236</td>
+      <td class="num">1701</td>
+      <td class="num">182/1701</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 4</td>
+      <td><a href="reports/langchain-ai_langchain.html" class="report-link">View Report</a></td>
+    </tr>
+<tr>
+      <td><a href="https://github.com/letta-ai/letta" target="_blank" rel="noopener">letta-ai/letta</a></td>
+      <td class="num">21,227</td>
+      <td class="num">258</td>
+      <td class="num">38/258</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 5</td>
+      <td><a href="reports/letta-ai_letta.html" class="report-link">View Report</a></td>
+    </tr>
+<tr>
+      <td><a href="https://github.com/mem0ai/mem0" target="_blank" rel="noopener">mem0ai/mem0</a></td>
+      <td class="num">47,867</td>
+      <td class="num">116</td>
+      <td class="num">44/116</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 13</td>
+      <td><a href="reports/mem0ai_mem0.html" class="report-link">View Report</a></td>
+    </tr>
+<tr>
+      <td><a href="https://github.com/microsoft/autogen" target="_blank" rel="noopener">microsoft/autogen</a></td>
+      <td class="num">54,739</td>
+      <td class="num">24</td>
+      <td class="num">0/24</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 0</td>
+      <td><a href="reports/microsoft_autogen.html" class="report-link">View Report</a></td>
+    </tr>
+<tr>
+      <td><a href="https://github.com/openai/openai-agents-python" target="_blank" rel="noopener">openai/openai-agents-python</a></td>
+      <td class="num">19,087</td>
+      <td class="num">6</td>
+      <td class="num">0/6</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 0</td>
+      <td><a href="reports/openai_openai-agents-python.html" class="report-link">View Report</a></td>
+    </tr>
+<tr>
+      <td><a href="https://github.com/openai/swarm" target="_blank" rel="noopener">openai/swarm</a></td>
+      <td class="num">21,000</td>
+      <td class="num">9</td>
+      <td class="num">0/9</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 0</td>
+      <td><a href="reports/openai_swarm.html" class="report-link">View Report</a></td>
+    </tr>
+<tr>
+      <td><a href="https://github.com/OpenInterpreter/open-interpreter" target="_blank" rel="noopener">OpenInterpreter/open-interpreter</a></td>
+      <td class="num">62,367</td>
+      <td class="num">4</td>
+      <td class="num">0/4</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 0</td>
+      <td><a href="reports/OpenInterpreter_open-interpreter.html" class="report-link">View Report</a></td>
+    </tr>
+<tr>
+      <td><a href="https://github.com/pydantic/pydantic-ai" target="_blank" rel="noopener">pydantic/pydantic-ai</a></td>
+      <td class="num">15,033</td>
+      <td class="num">5</td>
+      <td class="num">0/5</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 0</td>
+      <td><a href="reports/pydantic_pydantic-ai.html" class="report-link">View Report</a></td>
+    </tr>
+<tr>
+      <td><a href="https://github.com/Pythagora-io/gpt-pilot" target="_blank" rel="noopener">Pythagora-io/gpt-pilot</a></td>
+      <td class="num">33,795</td>
+      <td class="num">2</td>
+      <td class="num">0/2</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 0</td>
+      <td><a href="reports/Pythagora-io_gpt-pilot.html" class="report-link">View Report</a></td>
+    </tr>
+<tr>
+      <td><a href="https://github.com/run-llama/llama_index" target="_blank" rel="noopener">run-llama/llama_index</a></td>
+      <td class="num">47,130</td>
+      <td class="num">200</td>
+      <td class="num">25/200</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 4</td>
+      <td><a href="reports/run-llama_llama_index.html" class="report-link">View Report</a></td>
+    </tr>
+<tr>
+      <td><a href="https://github.com/ScrapeGraphAI/Scrapegraph-ai" target="_blank" rel="noopener">ScrapeGraphAI/Scrapegraph-ai</a></td>
+      <td class="num">22,756</td>
+      <td class="num">42</td>
+      <td class="num">0/42</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 0</td>
+      <td><a href="reports/ScrapeGraphAI_Scrapegraph-ai.html" class="report-link">View Report</a></td>
+    </tr>
+<tr>
+      <td><a href="https://github.com/Significant-Gravitas/AutoGPT" target="_blank" rel="noopener">Significant-Gravitas/AutoGPT</a></td>
+      <td class="num">181,955</td>
+      <td class="num">34</td>
+      <td class="num">1/34</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 1</td>
+      <td><a href="reports/Significant-Gravitas_AutoGPT.html" class="report-link">View Report</a></td>
+    </tr>
+<tr>
+      <td><a href="https://github.com/stanfordnlp/dspy" target="_blank" rel="noopener">stanfordnlp/dspy</a></td>
+      <td class="num">32,351</td>
+      <td class="num">7</td>
+      <td class="num">0/7</td>
+      <td class="num"><span class="grade" style="background:#2e0505;color:#ef4444">F</span> 0</td>
+      <td><a href="reports/stanfordnlp_dspy.html" class="report-link">View Report</a></td>
+    </tr>
+      </tbody>
+    </table>
+
+    <div class="cta">
+      <strong>Check your own repo:</strong><br>
+      <code>pip install assay-ai && assay scan . && assay score .</code>
+    </div>
+
+    <div class="footer">
+      <p>
+        <a href="https://github.com/Haserjian/assay-scorecard">Source</a>
+        &middot; <a href="methodology.html">Methodology</a>
+        &middot; <a href="https://github.com/Haserjian/assay-scorecard/issues">Report an issue</a>
+        &middot; Powered by <a href="https://pypi.org/project/assay-ai/">Assay</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function sortTable(col) {
+      const table = document.getElementById('scorecard');
+      const tbody = table.querySelector('tbody');
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+      const dir = table.dataset.sortDir === 'asc' ? 'desc' : 'asc';
+      table.dataset.sortDir = dir;
+
+      rows.sort((a, b) => {
+        let av = a.cells[col].textContent.trim().replace(/,/g, '');
+        let bv = b.cells[col].textContent.trim().replace(/,/g, '');
+        const an = parseFloat(av), bn = parseFloat(bv);
+        if (!isNaN(an) && !isNaN(bn)) {
+          return dir === 'asc' ? an - bn : bn - an;
+        }
+        return dir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av);
+      });
+
+      rows.forEach(r => tbody.appendChild(r));
+    }
+  </script>
+</body>
+</html>
