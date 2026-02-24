@@ -60,6 +60,7 @@ jobs:
             --base-json /tmp/delta/base.json \
             --head-json /tmp/delta/head.json \
             --output /tmp/delta/comment.md \
+            --fail-on-regression \
             --json > /tmp/delta/delta.json
 
       - name: Upload delta artifact
