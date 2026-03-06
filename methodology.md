@@ -82,7 +82,7 @@ The scanner ([assay-ai](https://pypi.org/project/assay-ai/)) and this
 scorecard pipeline are open source. You can verify any result:
 
 ```bash
-pip install assay-ai
+pip install assay-ai   # on Windows: py -m pip install assay-ai
 git clone https://github.com/<owner>/<repo>
 cd <repo>
 assay scan . --json
