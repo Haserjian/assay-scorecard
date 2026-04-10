@@ -29,7 +29,7 @@ The scorecard measures readiness for this kind of auditability.
 CrewAI, DSPy, LiteLLM, Pydantic-AI, and others. Full list in
 [repos.yaml](repos.yaml).
 
-Scanning uses [assay-ai](https://pypi.org/project/assay-ai/) v1.19.0
+Scanning uses [assay-ai](https://pypi.org/project/assay-ai/) v1.22.0
 for AST-based detection of LLM call sites across OpenAI, Anthropic,
 Google Gemini, LangChain, and LiteLLM SDKs.
 
