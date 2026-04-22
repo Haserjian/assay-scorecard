@@ -6,7 +6,9 @@ workdir/
 __pycache__/
 *.pyc
 .venv/
+.venv-rescan/
 venv/
+.assay-scan-home/
 
 # OS
 .DS_Store

@@ -2,7 +2,7 @@
 
 > **Beta.** This scorecard is an early, automated signal — not a final verdict.
 > Scores reflect static analysis of public default branches using
-> [Assay](https://pypi.org/project/assay-ai/) v1.19.0. Known limitations are
+> [Assay](https://pypi.org/project/assay-ai/) v1.22.0. Known limitations are
 > listed below. If a result looks wrong, [open an issue](https://github.com/Haserjian/assay-scorecard/issues)
 > and we will investigate within 48 hours or remove the entry on request.
 
@@ -11,6 +11,14 @@
 The Assay Evidence Readiness Scorecard measures how much of an AI project's
 LLM-calling behavior is independently verifiable. It is **not** a security
 audit, vulnerability scan, or quality assessment.
+
+**See what "independently verifiable" looks like:**
+
+- [Proof Gallery](https://haserjian.github.io/assay-proof-gallery/) — real
+  proof packs you can verify in your browser (PASS, HONEST_FAIL, TAMPERED,
+  MCP notary, reviewer packet, control mapping, contested decision).
+- [Assay CLI](https://pypi.org/project/assay-ai/) — `pipx install assay-ai && assay demo-challenge`.
+- [Assay Verify Action](https://github.com/Haserjian/assay-verify-action) — gate your PRs on signed proof packs.
 
 ## What We Scan
 

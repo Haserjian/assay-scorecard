@@ -27,10 +27,34 @@ from pathlib import Path
 import yaml
 
 
-ASSAY_VERSION = "1.19.0"  # pinned — bump deliberately, not silently
+ASSAY_VERSION = "1.22.0"  # pinned — bump deliberately, not silently
 RESULTS_DIR = Path("site/data")
 REPORTS_DIR = Path("site/reports")
 WORKDIR = Path("workdir")
+SCAN_HOME = Path(".assay-scan-home").resolve()
+
+
+def build_scan_env() -> dict[str, str]:
+    """
+    Return a sanitized environment for `assay` subprocesses.
+
+    Why: `assay score` inspects user-state paths (HOME, XDG_*) to detect
+    signer keys, lockfiles, and other config that would leak operator state
+    into the public scan and give every target repo free points. We redirect
+    those paths at SCAN_HOME (empty by default) and strip any ASSAY_* vars
+    that might override the redirect.
+    """
+    env = os.environ.copy()
+    SCAN_HOME.mkdir(parents=True, exist_ok=True)
+    env["HOME"] = str(SCAN_HOME)
+    env["XDG_CONFIG_HOME"] = str(SCAN_HOME / ".config")
+    env["XDG_CACHE_HOME"] = str(SCAN_HOME / ".cache")
+    env["XDG_DATA_HOME"] = str(SCAN_HOME / ".local" / "share")
+    env["XDG_STATE_HOME"] = str(SCAN_HOME / ".local" / "state")
+    for key in list(env.keys()):
+        if key.startswith("ASSAY_"):
+            env.pop(key)
+    return env
 
 
 def load_repos(path: str = "repos.yaml", limit: int | None = None) -> list[dict]:
@@ -64,6 +88,7 @@ def run_assay_scan(repo_dir: Path) -> dict | None:
         result = subprocess.run(
             ["assay", "scan", ".", "--json"],
             cwd=str(repo_dir),
+            env=build_scan_env(),
             capture_output=True,
             text=True,
             timeout=300,
@@ -83,6 +108,7 @@ def run_assay_score(repo_dir: Path) -> dict | None:
         result = subprocess.run(
             ["assay", "score", ".", "--json"],
             cwd=str(repo_dir),
+            env=build_scan_env(),
             capture_output=True,
             text=True,
             timeout=120,
@@ -133,6 +159,7 @@ def run_assay_report(repo_dir: Path, output_path: Path) -> bool:
         subprocess.run(
             ["assay", "scan", ".", "--report"],
             cwd=str(repo_dir),
+            env=build_scan_env(),
             capture_output=True,
             text=True,
             timeout=300,
