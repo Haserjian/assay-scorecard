@@ -1,32 +1,32 @@
 {
-  "generated_at": "2026-03-29T03:05:29.631821+00:00",
-  "assay_version": "1.6.0",
+  "generated_at": "2026-04-22T21:22:48.651875+00:00",
+  "assay_version": "1.22.0",
   "repo_count": 20,
   "results": [
     {
       "repo": "Significant-Gravitas/AutoGPT",
       "category": "agent_framework",
-      "scanned_at": "2026-03-29T03:01:49.107176+00:00",
-      "stars": 182921,
+      "scanned_at": "2026-04-22T21:18:57.434062+00:00",
+      "stars": 183672,
       "scan": {
-        "sites_total": 36,
-        "instrumented": 2,
-        "uninstrumented": 34,
+        "sites_total": 47,
+        "instrumented": 0,
+        "uninstrumented": 47,
         "scan_status": "fail"
       },
       "score": {
-        "score": 1.9,
+        "score": 0.0,
         "grade": "F",
         "breakdown": {
           "coverage": {
             "weight": 35,
-            "points": 1.9,
+            "points": 0.0,
             "status": "partial",
-            "note": "2/36 instrumented",
+            "note": "0/47 instrumented",
             "evidence": {
-              "sites_total": 36,
-              "instrumented": 2,
-              "uninstrumented": 34
+              "sites_total": 47,
+              "instrumented": 0,
+              "uninstrumented": 47
             }
           },
           "lockfile": {
@@ -47,7 +47,7 @@
             "status": "fail",
             "note": "No evidence CI gate detected.",
             "evidence": {
-              "workflow_count": 30,
+              "workflow_count": 29,
               "files": [
                 ".github/workflows/classic-autogpt-ci.yml",
                 ".github/workflows/classic-autogpt-docker-cache-clean.yml",
@@ -57,7 +57,6 @@
                 ".github/workflows/classic-benchmark-ci.yml",
                 ".github/workflows/classic-benchmark_publish_package.yml",
                 ".github/workflows/classic-forge-ci.yml",
-                ".github/workflows/classic-frontend-ci.yml",
                 ".github/workflows/classic-python-checks.yml",
                 ".github/workflows/claude-ci-failure-auto-fix.yml",
                 ".github/workflows/claude-dependabot.yml",
@@ -115,27 +114,27 @@
     {
       "repo": "langchain-ai/langchain",
       "category": "agent_framework",
-      "scanned_at": "2026-03-29T03:02:03.403797+00:00",
-      "stars": 131414,
+      "scanned_at": "2026-04-22T21:19:10.487036+00:00",
+      "stars": 134520,
       "scan": {
-        "sites_total": 1734,
-        "instrumented": 187,
-        "uninstrumented": 1547,
+        "sites_total": 1793,
+        "instrumented": 0,
+        "uninstrumented": 1793,
         "scan_status": "fail"
       },
       "score": {
-        "score": 3.8,
+        "score": 0.0,
         "grade": "F",
         "breakdown": {
           "coverage": {
             "weight": 35,
-            "points": 3.8,
+            "points": 0.0,
             "status": "partial",
-            "note": "187/1734 instrumented",
+            "note": "0/1793 instrumented",
             "evidence": {
-              "sites_total": 1734,
-              "instrumented": 187,
-              "uninstrumented": 1547
+              "sites_total": 1793,
+              "instrumented": 0,
+              "uninstrumented": 1793
             }
           },
           "lockfile": {
@@ -156,7 +155,7 @@
             "status": "fail",
             "note": "No evidence CI gate detected.",
             "evidence": {
-              "workflow_count": 19,
+              "workflow_count": 22,
               "files": [
                 ".github/workflows/_compile_integration_test.yml",
                 ".github/workflows/_lint.yml",
@@ -164,16 +163,19 @@
                 ".github/workflows/_release.yml",
                 ".github/workflows/_test.yml",
                 ".github/workflows/_test_pydantic.yml",
+                ".github/workflows/_test_vcr.yml",
                 ".github/workflows/auto-label-by-package.yml",
                 ".github/workflows/check_agents_sync.yml",
                 ".github/workflows/check_core_versions.yml",
                 ".github/workflows/check_diffs.yml",
+                ".github/workflows/close_unchecked_issues.yml",
                 ".github/workflows/codspeed.yml",
                 ".github/workflows/integration_tests.yml",
                 ".github/workflows/pr_labeler.yml",
                 ".github/workflows/pr_labeler_backfill.yml",
                 ".github/workflows/pr_lint.yml",
                 ".github/workflows/refresh_model_profiles.yml",
+                ".github/workflows/reopen_on_assignment.yml",
                 ".github/workflows/require_issue_link.yml",
                 ".github/workflows/tag-external-issues.yml",
                 ".github/workflows/v03_api_doc_build.yml"
@@ -213,12 +215,12 @@
     {
       "repo": "geekan/MetaGPT",
       "category": "agent_framework",
-      "scanned_at": "2026-03-29T03:02:16.734957+00:00",
-      "stars": 66375,
+      "scanned_at": "2026-04-22T21:19:21.665873+00:00",
+      "stars": 67348,
       "scan": {
-        "sites_total": 8,
+        "sites_total": 11,
         "instrumented": 0,
-        "uninstrumented": 8,
+        "uninstrumented": 11,
         "scan_status": "fail"
       },
       "score": {
@@ -229,11 +231,11 @@
             "weight": 35,
             "points": 0.0,
             "status": "partial",
-            "note": "0/8 instrumented",
+            "note": "0/11 instrumented",
             "evidence": {
-              "sites_total": 8,
+              "sites_total": 11,
               "instrumented": 0,
-              "uninstrumented": 8
+              "uninstrumented": 11
             }
           },
           "lockfile": {
@@ -297,8 +299,8 @@
     {
       "repo": "microsoft/autogen",
       "category": "agent_framework",
-      "scanned_at": "2026-03-29T03:02:22.621617+00:00",
-      "stars": 56347,
+      "scanned_at": "2026-04-22T21:19:28.076424+00:00",
+      "stars": 57337,
       "scan": {
         "sites_total": 24,
         "instrumented": 0,
@@ -388,8 +390,8 @@
     {
       "repo": "gpt-engineer-org/gpt-engineer",
       "category": "agent_framework",
-      "scanned_at": "2026-03-29T03:02:30.580508+00:00",
-      "stars": 55231,
+      "scanned_at": "2026-04-22T21:19:35.419310+00:00",
+      "stars": 55214,
       "scan": {
         "sites_total": 8,
         "instrumented": 0,
@@ -471,27 +473,27 @@
     {
       "repo": "crewAIInc/crewAI",
       "category": "agent_framework",
-      "scanned_at": "2026-03-29T03:02:33.103976+00:00",
-      "stars": 47434,
+      "scanned_at": "2026-04-22T21:19:39.760383+00:00",
+      "stars": 49567,
       "scan": {
-        "sites_total": 27,
-        "instrumented": 1,
-        "uninstrumented": 26,
+        "sites_total": 31,
+        "instrumented": 0,
+        "uninstrumented": 31,
         "scan_status": "fail"
       },
       "score": {
-        "score": 1.3,
+        "score": 0.0,
         "grade": "F",
         "breakdown": {
           "coverage": {
             "weight": 35,
-            "points": 1.3,
+            "points": 0.0,
             "status": "partial",
-            "note": "1/27 instrumented",
+            "note": "0/31 instrumented",
             "evidence": {
-              "sites_total": 27,
-              "instrumented": 1,
-              "uninstrumented": 26
+              "sites_total": 31,
+              "instrumented": 0,
+              "uninstrumented": 31
             }
           },
           "lockfile": {
@@ -512,7 +514,7 @@
             "status": "fail",
             "note": "No evidence CI gate detected.",
             "evidence": {
-              "workflow_count": 13,
+              "workflow_count": 14,
               "files": [
                 ".github/workflows/build-uv-cache.yml",
                 ".github/workflows/codeql.yml",
@@ -526,7 +528,8 @@
                 ".github/workflows/stale.yml",
                 ".github/workflows/tests.yml",
                 ".github/workflows/type-checker.yml",
-                ".github/workflows/update-test-durations.yml"
+                ".github/workflows/update-test-durations.yml",
+                ".github/workflows/vulnerability-scan.yml"
               ],
               "has_assay_ref": false,
               "has_run": false,
@@ -563,27 +566,27 @@
     {
       "repo": "agno-agi/agno",
       "category": "agent_framework",
-      "scanned_at": "2026-03-29T03:02:46.497417+00:00",
-      "stars": 38996,
+      "scanned_at": "2026-04-22T21:19:57.362001+00:00",
+      "stars": 39608,
       "scan": {
-        "sites_total": 42,
-        "instrumented": 9,
-        "uninstrumented": 33,
+        "sites_total": 48,
+        "instrumented": 0,
+        "uninstrumented": 48,
         "scan_status": "fail"
       },
       "score": {
-        "score": 7.5,
+        "score": 0.0,
         "grade": "F",
         "breakdown": {
           "coverage": {
             "weight": 35,
-            "points": 7.5,
+            "points": 0.0,
             "status": "partial",
-            "note": "9/42 instrumented",
+            "note": "0/48 instrumented",
             "evidence": {
-              "sites_total": 42,
-              "instrumented": 9,
-              "uninstrumented": 33
+              "sites_total": 48,
+              "instrumented": 0,
+              "uninstrumented": 48
             }
           },
           "lockfile": {
@@ -650,12 +653,12 @@
     {
       "repo": "openai/openai-agents-python",
       "category": "agent_framework",
-      "scanned_at": "2026-03-29T03:03:09.958830+00:00",
-      "stars": 20377,
+      "scanned_at": "2026-04-22T21:20:14.532246+00:00",
+      "stars": 24607,
       "scan": {
-        "sites_total": 7,
+        "sites_total": 8,
         "instrumented": 0,
-        "uninstrumented": 7,
+        "uninstrumented": 8,
         "scan_status": "fail"
       },
       "score": {
@@ -666,11 +669,11 @@
             "weight": 35,
             "points": 0.0,
             "status": "partial",
-            "note": "0/7 instrumented",
+            "note": "0/8 instrumented",
             "evidence": {
-              "sites_total": 7,
+              "sites_total": 8,
               "instrumented": 0,
-              "uninstrumented": 7
+              "uninstrumented": 8
             }
           },
           "lockfile": {
@@ -738,27 +741,27 @@
     {
       "repo": "BerriAI/litellm",
       "category": "llm_tool",
-      "scanned_at": "2026-03-29T03:03:17.076424+00:00",
-      "stars": 41343,
+      "scanned_at": "2026-04-22T21:20:23.193038+00:00",
+      "stars": 44313,
       "scan": {
-        "sites_total": 994,
-        "instrumented": 416,
-        "uninstrumented": 578,
+        "sites_total": 1107,
+        "instrumented": 0,
+        "uninstrumented": 1107,
         "scan_status": "fail"
       },
       "score": {
-        "score": 14.6,
+        "score": 0.0,
         "grade": "F",
         "breakdown": {
           "coverage": {
             "weight": 35,
-            "points": 14.6,
+            "points": 0.0,
             "status": "partial",
-            "note": "416/994 instrumented",
+            "note": "0/1107 instrumented",
             "evidence": {
-              "sites_total": 994,
-              "instrumented": 416,
-              "uninstrumented": 578
+              "sites_total": 1107,
+              "instrumented": 0,
+              "uninstrumented": 1107
             }
           },
           "lockfile": {
@@ -788,7 +791,9 @@
                 ".github/workflows/check_duplicate_issues.yml",
                 ".github/workflows/codeql.yml",
                 ".github/workflows/codspeed.yml",
+                ".github/workflows/create-release.yml",
                 ".github/workflows/create_daily_staging_branch.yml",
+                ".github/workflows/guard-main-branch.yml",
                 ".github/workflows/helm_unit_test.yml",
                 ".github/workflows/issue-keyword-labeler.yml",
                 ".github/workflows/label-component.yml",
@@ -797,16 +802,14 @@
                 ".github/workflows/read_pyproject_version.yml",
                 ".github/workflows/run_observatory_tests.yml",
                 ".github/workflows/scan_duplicate_issues.yml",
+                ".github/workflows/scorecard.yml",
                 ".github/workflows/stale.yml",
                 ".github/workflows/sync-schema.yml",
                 ".github/workflows/test-linting.yml",
-                ".github/workflows/test-litellm-matrix.yml",
                 ".github/workflows/test-litellm-ui-build.yml",
                 ".github/workflows/test-litellm.yml",
                 ".github/workflows/test-mcp.yml",
                 ".github/workflows/test-model-map.yaml",
-                ".github/workflows/test-proxy-e2e-azure-batches.yml",
-                ".github/workflows/test-unit-caching-redis.yml",
                 ".github/workflows/test-unit-core-utils.yml",
                 ".github/workflows/test-unit-documentation.yml",
                 ".github/workflows/test-unit-enterprise-routing.yml",
@@ -826,7 +829,7 @@
               "has_assay_ref": false,
               "has_run": false,
               "has_verify": false,
-              "has_lock": true
+              "has_lock": false
             }
           },
           "receipts": {
@@ -858,8 +861,8 @@
     {
       "repo": "Pythagora-io/gpt-pilot",
       "category": "llm_tool",
-      "scanned_at": "2026-03-29T03:04:02.593811+00:00",
-      "stars": 33804,
+      "scanned_at": "2026-04-22T21:21:15.991960+00:00",
+      "stars": 33775,
       "scan": {
         "sites_total": 2,
         "instrumented": 0,
@@ -939,8 +942,8 @@
     {
       "repo": "stanfordnlp/dspy",
       "category": "llm_tool",
-      "scanned_at": "2026-03-29T03:04:05.073288+00:00",
-      "stars": 33238,
+      "scanned_at": "2026-04-22T21:21:19.470207+00:00",
+      "stars": 33923,
       "scan": {
         "sites_total": 7,
         "instrumented": 0,
@@ -1022,12 +1025,12 @@
     {
       "repo": "pydantic/pydantic-ai",
       "category": "llm_tool",
-      "scanned_at": "2026-03-29T03:04:09.369363+00:00",
-      "stars": 15897,
+      "scanned_at": "2026-04-22T21:21:24.874747+00:00",
+      "stars": 16556,
       "scan": {
-        "sites_total": 5,
+        "sites_total": 13,
         "instrumented": 0,
-        "uninstrumented": 5,
+        "uninstrumented": 13,
         "scan_status": "fail"
       },
       "score": {
@@ -1038,11 +1041,11 @@
             "weight": 35,
             "points": 0.0,
             "status": "partial",
-            "note": "0/5 instrumented",
+            "note": "0/13 instrumented",
             "evidence": {
-              "sites_total": 5,
+              "sites_total": 13,
               "instrumented": 0,
-              "uninstrumented": 5
+              "uninstrumented": 13
             }
           },
           "lockfile": {
@@ -1063,12 +1066,13 @@
             "status": "fail",
             "note": "No evidence CI gate detected.",
             "evidence": {
-              "workflow_count": 7,
+              "workflow_count": 8,
               "files": [
                 ".github/workflows/after-ci.yml",
                 ".github/workflows/at-claude.yml",
                 ".github/workflows/bots.yml",
                 ".github/workflows/ci.yml",
+                ".github/workflows/gateway-model-health.yml",
                 ".github/workflows/manually-deploy-docs.yml",
                 ".github/workflows/pr-guard.yml",
                 ".github/workflows/stale.yml"
@@ -1108,27 +1112,27 @@
     {
       "repo": "567-labs/instructor",
       "category": "llm_tool",
-      "scanned_at": "2026-03-29T03:04:24.150151+00:00",
-      "stars": 12622,
+      "scanned_at": "2026-04-22T21:21:41.510701+00:00",
+      "stars": 12811,
       "scan": {
-        "sites_total": 240,
-        "instrumented": 22,
-        "uninstrumented": 218,
+        "sites_total": 244,
+        "instrumented": 0,
+        "uninstrumented": 244,
         "scan_status": "fail"
       },
       "score": {
-        "score": 3.2,
+        "score": 0.0,
         "grade": "F",
         "breakdown": {
           "coverage": {
             "weight": 35,
-            "points": 3.2,
+            "points": 0.0,
             "status": "partial",
-            "note": "22/240 instrumented",
+            "note": "0/244 instrumented",
             "evidence": {
-              "sites_total": 240,
-              "instrumented": 22,
-              "uninstrumented": 218
+              "sites_total": 244,
+              "instrumented": 0,
+              "uninstrumented": 244
             }
           },
           "lockfile": {
@@ -1195,8 +1199,8 @@
     {
       "repo": "OpenInterpreter/open-interpreter",
       "category": "ai_application",
-      "scanned_at": "2026-03-29T03:04:29.398469+00:00",
-      "stars": 62894,
+      "scanned_at": "2026-04-22T21:21:50.382483+00:00",
+      "stars": 63265,
       "scan": {
         "sites_total": 4,
         "instrumented": 0,
@@ -1276,27 +1280,27 @@
     {
       "repo": "mem0ai/mem0",
       "category": "ai_application",
-      "scanned_at": "2026-03-29T03:04:31.914799+00:00",
-      "stars": 51346,
+      "scanned_at": "2026-04-22T21:21:53.918999+00:00",
+      "stars": 53825,
       "scan": {
-        "sites_total": 148,
-        "instrumented": 72,
-        "uninstrumented": 76,
+        "sites_total": 152,
+        "instrumented": 0,
+        "uninstrumented": 152,
         "scan_status": "fail"
       },
       "score": {
-        "score": 17.0,
+        "score": 0.0,
         "grade": "F",
         "breakdown": {
           "coverage": {
             "weight": 35,
-            "points": 17.0,
+            "points": 0.0,
             "status": "partial",
-            "note": "72/148 instrumented",
+            "note": "0/152 instrumented",
             "evidence": {
-              "sites_total": 148,
-              "instrumented": 72,
-              "uninstrumented": 76
+              "sites_total": 152,
+              "instrumented": 0,
+              "uninstrumented": 152
             }
           },
           "lockfile": {
@@ -1317,14 +1321,22 @@
             "status": "fail",
             "note": "No evidence CI gate detected.",
             "evidence": {
-              "workflow_count": 6,
+              "workflow_count": 14,
               "files": [
                 ".github/workflows/cd.yml",
                 ".github/workflows/ci.yml",
+                ".github/workflows/cli-node-cd.yml",
+                ".github/workflows/cli-node-ci.yml",
+                ".github/workflows/cli-python-cd.yml",
+                ".github/workflows/cli-python-ci.yml",
+                ".github/workflows/docs-llms-txt-check.yml",
                 ".github/workflows/issue-labeler.yml",
+                ".github/workflows/openclaw-cd.yml",
                 ".github/workflows/openclaw-checks.yml",
                 ".github/workflows/stale.yml",
-                ".github/workflows/ts-sdk-ci.yml"
+                ".github/workflows/ts-sdk-cd.yml",
+                ".github/workflows/ts-sdk-ci.yml",
+                ".github/workflows/vercel-ai-cd.yml"
               ],
               "has_assay_ref": false,
               "has_run": false,
@@ -1361,27 +1373,27 @@
     {
       "repo": "letta-ai/letta",
       "category": "ai_application",
-      "scanned_at": "2026-03-29T03:04:37.688188+00:00",
-      "stars": 21789,
+      "scanned_at": "2026-04-22T21:22:00.516116+00:00",
+      "stars": 22228,
       "scan": {
-        "sites_total": 277,
-        "instrumented": 76,
-        "uninstrumented": 201,
+        "sites_total": 303,
+        "instrumented": 0,
+        "uninstrumented": 303,
         "scan_status": "fail"
       },
       "score": {
-        "score": 9.6,
+        "score": 0.0,
         "grade": "F",
         "breakdown": {
           "coverage": {
             "weight": 35,
-            "points": 9.6,
+            "points": 0.0,
             "status": "partial",
-            "note": "76/277 instrumented",
+            "note": "0/303 instrumented",
             "evidence": {
-              "sites_total": 277,
-              "instrumented": 76,
-              "uninstrumented": 201
+              "sites_total": 303,
+              "instrumented": 0,
+              "uninstrumented": 303
             }
           },
           "lockfile": {
@@ -1402,7 +1414,7 @@
             "status": "fail",
             "note": "No evidence CI gate detected.",
             "evidence": {
-              "workflow_count": 30,
+              "workflow_count": 31,
               "files": [
                 ".github/workflows/alembic-validation.yml",
                 ".github/workflows/close_stale_issues.yml",
@@ -1419,6 +1431,7 @@
                 ".github/workflows/fern-sdk-python-publish.yml",
                 ".github/workflows/fern-sdk-typescript-preview.yml",
                 ".github/workflows/fern-sdk-typescript-publish.yml",
+                ".github/workflows/issue-guard.yml",
                 ".github/workflows/letta-code-sync.yml",
                 ".github/workflows/lint-command.yml",
                 ".github/workflows/manually_clear_old_issues.yml",
@@ -1470,8 +1483,8 @@
     {
       "repo": "openai/swarm",
       "category": "ai_application",
-      "scanned_at": "2026-03-29T03:04:48.308268+00:00",
-      "stars": 21247,
+      "scanned_at": "2026-04-22T21:22:09.868453+00:00",
+      "stars": 21367,
       "scan": {
         "sites_total": 9,
         "instrumented": 0,
@@ -1548,27 +1561,27 @@
     {
       "repo": "run-llama/llama_index",
       "category": "rag_framework",
-      "scanned_at": "2026-03-29T03:04:50.089137+00:00",
-      "stars": 48097,
+      "scanned_at": "2026-04-22T21:22:13.156354+00:00",
+      "stars": 48813,
       "scan": {
-        "sites_total": 200,
-        "instrumented": 25,
-        "uninstrumented": 175,
+        "sites_total": 192,
+        "instrumented": 0,
+        "uninstrumented": 192,
         "scan_status": "fail"
       },
       "score": {
-        "score": 4.4,
+        "score": 0.0,
         "grade": "F",
         "breakdown": {
           "coverage": {
             "weight": 35,
-            "points": 4.4,
+            "points": 0.0,
             "status": "partial",
-            "note": "25/200 instrumented",
+            "note": "0/192 instrumented",
             "evidence": {
-              "sites_total": 200,
-              "instrumented": 25,
-              "uninstrumented": 175
+              "sites_total": 192,
+              "instrumented": 0,
+              "uninstrumented": 192
             }
           },
           "lockfile": {
@@ -1641,8 +1654,8 @@
     {
       "repo": "deepset-ai/haystack",
       "category": "rag_framework",
-      "scanned_at": "2026-03-29T03:05:18.874703+00:00",
-      "stars": 24639,
+      "scanned_at": "2026-04-22T21:22:36.417576+00:00",
+      "stars": 24950,
       "scan": {
         "sites_total": 5,
         "instrumented": 0,
@@ -1682,12 +1695,14 @@
             "status": "fail",
             "note": "No evidence CI gate detected.",
             "evidence": {
-              "workflow_count": 25,
+              "workflow_count": 27,
               "files": [
                 ".github/workflows/auto_approve_api_ref_sync.yml",
                 ".github/workflows/branch_off.yml",
                 ".github/workflows/check_api_ref.yml",
                 ".github/workflows/ci_metrics.yml",
+                ".github/workflows/claude-code-review.yml",
+                ".github/workflows/claude.yml",
                 ".github/workflows/docker_release.yml",
                 ".github/workflows/docs-website-test-docs-snippets.yml",
                 ".github/workflows/docs_search_sync.yml",
@@ -1745,8 +1760,8 @@
     {
       "repo": "ScrapeGraphAI/Scrapegraph-ai",
       "category": "rag_framework",
-      "scanned_at": "2026-03-29T03:05:26.931370+00:00",
-      "stars": 23146,
+      "scanned_at": "2026-04-22T21:22:45.033841+00:00",
+      "stars": 23354,
       "scan": {
         "sites_total": 42,
         "instrumented": 0,
